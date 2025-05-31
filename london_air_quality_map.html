@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f12c505930012e3663dbdaef0cde4beb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f12c505930012e3663dbdaef0cde4beb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f12c505930012e3663dbdaef0cde4beb = L.map(
+                "map_f12c505930012e3663dbdaef0cde4beb",
+                {
+                    center: [51.5074, -0.1278],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_70f37b1c82f09c97e1d8b5f71e7c0a64 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_70f37b1c82f09c97e1d8b5f71e7c0a64.addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var heat_map_8688cd97b6dad2b0de0fb11357827460 = L.heatLayer(
+                [[51.50572084179, -0.08887250012, 33]],
+                {
+  "minOpacity": 0.4,
+  "maxZoom": 10,
+  "radius": 35,
+  "blur": 20,
+}
+            );
+        
+    
+            heat_map_8688cd97b6dad2b0de0fb11357827460.addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var marker_9813d038b2b3939316de0f35995417c7 = L.marker(
+                [51.5073509, -0.1277583],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_1a7155c66b525aba4b6e738d4ffe2116 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                38\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_9813d038b2b3939316de0f35995417c7.setIcon(div_icon_1a7155c66b525aba4b6e738d4ffe2116);
+        
+    
+        var popup_0c41048ee7dd3bedde6cd34723ba969e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_382fb73fe1d72ce0268f241f130a1f25 = $(`<div id="html_382fb73fe1d72ce0268f241f130a1f25" style="width: 100.0%; height: 100.0%;">London<br>AQI: 38</div>`)[0];
+                popup_0c41048ee7dd3bedde6cd34723ba969e.setContent(html_382fb73fe1d72ce0268f241f130a1f25);
+            
+        
+
+        marker_9813d038b2b3939316de0f35995417c7.bindPopup(popup_0c41048ee7dd3bedde6cd34723ba969e)
+        ;
+
+        
+    
+    
+                marker_9813d038b2b3939316de0f35995417c7.setIcon(div_icon_1a7155c66b525aba4b6e738d4ffe2116);
+            
+    
+            var marker_6f134a3be7bf549034fc342e6a0c5afb = L.marker(
+                [51.5139287404213, -0.152792701881935],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_8b846248882e3c00bb469eb258d68217 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                57\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_6f134a3be7bf549034fc342e6a0c5afb.setIcon(div_icon_8b846248882e3c00bb469eb258d68217);
+        
+    
+        var popup_c4ced25be00f04ae314e9b519bbd4512 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5de4a590fbf90776d24253e30dca0e61 = $(`<div id="html_5de4a590fbf90776d24253e30dca0e61" style="width: 100.0%; height: 100.0%;">Westminster - Oxford Street, United Kingdom<br>AQI: 57</div>`)[0];
+                popup_c4ced25be00f04ae314e9b519bbd4512.setContent(html_5de4a590fbf90776d24253e30dca0e61);
+            
+        
+
+        marker_6f134a3be7bf549034fc342e6a0c5afb.bindPopup(popup_c4ced25be00f04ae314e9b519bbd4512)
+        ;
+
+        
+    
+    
+                marker_6f134a3be7bf549034fc342e6a0c5afb.setIcon(div_icon_8b846248882e3c00bb469eb258d68217);
+            
+    
+            var marker_b3b5076461394486bdc8d6f8b36210de = L.marker(
+                [51.54421, -0.175269],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_b3862bfa2ffdbf261bdeeb93f0c9cc11 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                53\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_b3b5076461394486bdc8d6f8b36210de.setIcon(div_icon_b3862bfa2ffdbf261bdeeb93f0c9cc11);
+        
+    
+        var popup_07fc8976270623ca8b8ee507e651bc0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad6bf8afd219a0d8df718b0364cc31cf = $(`<div id="html_ad6bf8afd219a0d8df718b0364cc31cf" style="width: 100.0%; height: 100.0%;">Camden Kerbside, United Kingdom<br>AQI: 53</div>`)[0];
+                popup_07fc8976270623ca8b8ee507e651bc0c.setContent(html_ad6bf8afd219a0d8df718b0364cc31cf);
+            
+        
+
+        marker_b3b5076461394486bdc8d6f8b36210de.bindPopup(popup_07fc8976270623ca8b8ee507e651bc0c)
+        ;
+
+        
+    
+    
+                marker_b3b5076461394486bdc8d6f8b36210de.setIcon(div_icon_b3862bfa2ffdbf261bdeeb93f0c9cc11);
+            
+    
+            var marker_67e165da0058e7523fe11bb1f8c30424 = L.marker(
+                [51.429331, -0.166524],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_2f2b3de40cdd366c2f09bb91ca2ef25e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                42\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_67e165da0058e7523fe11bb1f8c30424.setIcon(div_icon_2f2b3de40cdd366c2f09bb91ca2ef25e);
+        
+    
+        var popup_b96384c84ba8cd2c120fa7563f3f7f05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd861109313806ec5d7a181b14b566d2 = $(`<div id="html_fd861109313806ec5d7a181b14b566d2" style="width: 100.0%; height: 100.0%;">Wandsworth - Tooting High Street, United Kingdom<br>AQI: 42</div>`)[0];
+                popup_b96384c84ba8cd2c120fa7563f3f7f05.setContent(html_fd861109313806ec5d7a181b14b566d2);
+            
+        
+
+        marker_67e165da0058e7523fe11bb1f8c30424.bindPopup(popup_b96384c84ba8cd2c120fa7563f3f7f05)
+        ;
+
+        
+    
+    
+                marker_67e165da0058e7523fe11bb1f8c30424.setIcon(div_icon_2f2b3de40cdd366c2f09bb91ca2ef25e);
+            
+    
+            var marker_ec58b745c55b5ddd9dffc6d9b9ea91bd = L.marker(
+                [51.52253, -0.154611],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_f2729f71598db9c8650a6be80c0a57c6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                38\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_ec58b745c55b5ddd9dffc6d9b9ea91bd.setIcon(div_icon_f2729f71598db9c8650a6be80c0a57c6);
+        
+    
+        var popup_e3b65bd00fe03cc4c11a374b7d3b2ff8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_560c0e098da6c0cf916bbbefccb4081b = $(`<div id="html_560c0e098da6c0cf916bbbefccb4081b" style="width: 100.0%; height: 100.0%;">London Marylebone Road, United Kingdom<br>AQI: 38</div>`)[0];
+                popup_e3b65bd00fe03cc4c11a374b7d3b2ff8.setContent(html_560c0e098da6c0cf916bbbefccb4081b);
+            
+        
+
+        marker_ec58b745c55b5ddd9dffc6d9b9ea91bd.bindPopup(popup_e3b65bd00fe03cc4c11a374b7d3b2ff8)
+        ;
+
+        
+    
+    
+                marker_ec58b745c55b5ddd9dffc6d9b9ea91bd.setIcon(div_icon_f2729f71598db9c8650a6be80c0a57c6);
+            
+    
+            var marker_ddeb23918104da4164db4c58daed718b = L.marker(
+                [51.52105, -0.213492],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_5f44216b35ab23cbfd374fa8b815c597 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                33\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_ddeb23918104da4164db4c58daed718b.setIcon(div_icon_5f44216b35ab23cbfd374fa8b815c597);
+        
+    
+        var popup_6c19f89111d117233f64c6a54ef86ba9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eda2b0da69f671236717bf2109219290 = $(`<div id="html_eda2b0da69f671236717bf2109219290" style="width: 100.0%; height: 100.0%;">London N. Kensington, United Kingdom<br>AQI: 33</div>`)[0];
+                popup_6c19f89111d117233f64c6a54ef86ba9.setContent(html_eda2b0da69f671236717bf2109219290);
+            
+        
+
+        marker_ddeb23918104da4164db4c58daed718b.bindPopup(popup_6c19f89111d117233f64c6a54ef86ba9)
+        ;
+
+        
+    
+    
+                marker_ddeb23918104da4164db4c58daed718b.setIcon(div_icon_5f44216b35ab23cbfd374fa8b815c597);
+            
+    
+            var marker_c51d7ebfc21a5beef6a395fd36cec640 = L.marker(
+                [51.5013906712066, -0.0782034373606952],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_50c04b5cf3542124eb7d02d38c4c6c07 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                33\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_c51d7ebfc21a5beef6a395fd36cec640.setIcon(div_icon_50c04b5cf3542124eb7d02d38c4c6c07);
+        
+    
+        var popup_37e7b867027ca37466403c5ec606adce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_470ac4fe38724766aed6522b8a3cdf4b = $(`<div id="html_470ac4fe38724766aed6522b8a3cdf4b" style="width: 100.0%; height: 100.0%;">Southwark - Tower Bridge Road, United Kingdom<br>AQI: 33</div>`)[0];
+                popup_37e7b867027ca37466403c5ec606adce.setContent(html_470ac4fe38724766aed6522b8a3cdf4b);
+            
+        
+
+        marker_c51d7ebfc21a5beef6a395fd36cec640.bindPopup(popup_37e7b867027ca37466403c5ec606adce)
+        ;
+
+        
+    
+    
+                marker_c51d7ebfc21a5beef6a395fd36cec640.setIcon(div_icon_50c04b5cf3542124eb7d02d38c4c6c07);
+            
+    
+            var marker_7e95bf4b041d8f375ae230292e2d60a4 = L.marker(
+                [51.464113541162, -0.11458102695123],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_6a29b87994b42323eb87190f9dc94482 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                30\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_7e95bf4b041d8f375ae230292e2d60a4.setIcon(div_icon_6a29b87994b42323eb87190f9dc94482);
+        
+    
+        var popup_2dc6da6fe729a6ed46e0c6489fbc13ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56d093a408ac63437db704a4432e8fd9 = $(`<div id="html_56d093a408ac63437db704a4432e8fd9" style="width: 100.0%; height: 100.0%;">Lambeth - Brixton Road, United Kingdom<br>AQI: 30</div>`)[0];
+                popup_2dc6da6fe729a6ed46e0c6489fbc13ac.setContent(html_56d093a408ac63437db704a4432e8fd9);
+            
+        
+
+        marker_7e95bf4b041d8f375ae230292e2d60a4.bindPopup(popup_2dc6da6fe729a6ed46e0c6489fbc13ac)
+        ;
+
+        
+    
+    
+                marker_7e95bf4b041d8f375ae230292e2d60a4.setIcon(div_icon_6a29b87994b42323eb87190f9dc94482);
+            
+    
+            var marker_4a4c45310180dcb7cccb17c64eb58990 = L.marker(
+                [51.4931557048667, -0.101527038274853],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_7f7b344f0cf9803c71a60252b8a19e46 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                28\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_4a4c45310180dcb7cccb17c64eb58990.setIcon(div_icon_7f7b344f0cf9803c71a60252b8a19e46);
+        
+    
+        var popup_174310de82001f6e9e44392c0407e704 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d1c37c7798fcfc4512aee1ec25eb8463 = $(`<div id="html_d1c37c7798fcfc4512aee1ec25eb8463" style="width: 100.0%; height: 100.0%;">Southwark - Elephant and Castle, United Kingdom<br>AQI: 28</div>`)[0];
+                popup_174310de82001f6e9e44392c0407e704.setContent(html_d1c37c7798fcfc4512aee1ec25eb8463);
+            
+        
+
+        marker_4a4c45310180dcb7cccb17c64eb58990.bindPopup(popup_174310de82001f6e9e44392c0407e704)
+        ;
+
+        
+    
+    
+                marker_4a4c45310180dcb7cccb17c64eb58990.setIcon(div_icon_7f7b344f0cf9803c71a60252b8a19e46);
+            
+    
+            var marker_0b831a059aa4beaaec763c51a3bd1ecf = L.marker(
+                [51.52229, -0.125889],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_1d9fc3d728e07b675b9cbdbb76dab32e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                26\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_0b831a059aa4beaaec763c51a3bd1ecf.setIcon(div_icon_1d9fc3d728e07b675b9cbdbb76dab32e);
+        
+    
+        var popup_0e2dfe6a9fde704528ca9268ab6078af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_024208ef32ef1942c98394ecc48fbe2e = $(`<div id="html_024208ef32ef1942c98394ecc48fbe2e" style="width: 100.0%; height: 100.0%;">London Bloomsbury, United Kingdom<br>AQI: 26</div>`)[0];
+                popup_0e2dfe6a9fde704528ca9268ab6078af.setContent(html_024208ef32ef1942c98394ecc48fbe2e);
+            
+        
+
+        marker_0b831a059aa4beaaec763c51a3bd1ecf.bindPopup(popup_0e2dfe6a9fde704528ca9268ab6078af)
+        ;
+
+        
+    
+    
+                marker_0b831a059aa4beaaec763c51a3bd1ecf.setIcon(div_icon_1d9fc3d728e07b675b9cbdbb76dab32e);
+            
+    
+            var marker_0adafd9a092453fbd41a257d3a0f1df4 = L.marker(
+                [51.557895, -0.106989],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_b059cbf1fd7f9bacb15ccf7c7eeb81cc = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                25\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_0adafd9a092453fbd41a257d3a0f1df4.setIcon(div_icon_b059cbf1fd7f9bacb15ccf7c7eeb81cc);
+        
+    
+        var popup_18aeee7c5ec8b10dde404f5635f8605c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78af31bf65614081214400fc2dcbbb5e = $(`<div id="html_78af31bf65614081214400fc2dcbbb5e" style="width: 100.0%; height: 100.0%;">Islington - Arsenal, United Kingdom<br>AQI: 25</div>`)[0];
+                popup_18aeee7c5ec8b10dde404f5635f8605c.setContent(html_78af31bf65614081214400fc2dcbbb5e);
+            
+        
+
+        marker_0adafd9a092453fbd41a257d3a0f1df4.bindPopup(popup_18aeee7c5ec8b10dde404f5635f8605c)
+        ;
+
+        
+    
+    
+                marker_0adafd9a092453fbd41a257d3a0f1df4.setIcon(div_icon_b059cbf1fd7f9bacb15ccf7c7eeb81cc);
+            
+    
+            var marker_405fa68914b1e10e08f25cccc99568e6 = L.marker(
+                [51.4922482333024, -0.147114752900186],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_765b81292131c8697e0b4f51b305a431 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                25\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_405fa68914b1e10e08f25cccc99568e6.setIcon(div_icon_765b81292131c8697e0b4f51b305a431);
+        
+    
+        var popup_9095a7d2ce7293ba33f8538ac542a69e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b28ab7b2f53cefbca92e30439f9fe9e = $(`<div id="html_7b28ab7b2f53cefbca92e30439f9fe9e" style="width: 100.0%; height: 100.0%;">Westminster - Elizabeth Bridge, United Kingdom<br>AQI: 25</div>`)[0];
+                popup_9095a7d2ce7293ba33f8538ac542a69e.setContent(html_7b28ab7b2f53cefbca92e30439f9fe9e);
+            
+        
+
+        marker_405fa68914b1e10e08f25cccc99568e6.bindPopup(popup_9095a7d2ce7293ba33f8538ac542a69e)
+        ;
+
+        
+    
+    
+                marker_405fa68914b1e10e08f25cccc99568e6.setIcon(div_icon_765b81292131c8697e0b4f51b305a431);
+            
+    
+            var marker_4f04e906f35cd659d9a0834db95b6753 = L.marker(
+                [51.49467, -0.131931],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_20a935482a6ca968c9798948eb819e5b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                25\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_4f04e906f35cd659d9a0834db95b6753.setIcon(div_icon_20a935482a6ca968c9798948eb819e5b);
+        
+    
+        var popup_fc66052bce814171b1d312f28901c787 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9dfc8f69d2cd6a924edfa94a8c693346 = $(`<div id="html_9dfc8f69d2cd6a924edfa94a8c693346" style="width: 100.0%; height: 100.0%;">London Westminster, United Kingdom<br>AQI: 25</div>`)[0];
+                popup_fc66052bce814171b1d312f28901c787.setContent(html_9dfc8f69d2cd6a924edfa94a8c693346);
+            
+        
+
+        marker_4f04e906f35cd659d9a0834db95b6753.bindPopup(popup_fc66052bce814171b1d312f28901c787)
+        ;
+
+        
+    
+    
+                marker_4f04e906f35cd659d9a0834db95b6753.setIcon(div_icon_20a935482a6ca968c9798948eb819e5b);
+            
+    
+            var marker_2c1d35a77321547c729ef28d651c7ebb = L.marker(
+                [51.4794395281222, -0.141786953606306],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_d8c3af8c9b246d19f2595fa074ceb53f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                25\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_2c1d35a77321547c729ef28d651c7ebb.setIcon(div_icon_d8c3af8c9b246d19f2595fa074ceb53f);
+        
+    
+        var popup_b04f81a22fea644da47eaee458b4b61a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03f8ab66c8d7161eb2e0618b1a3cddba = $(`<div id="html_03f8ab66c8d7161eb2e0618b1a3cddba" style="width: 100.0%; height: 100.0%;">Wandsworth - Battersea, United Kingdom<br>AQI: 25</div>`)[0];
+                popup_b04f81a22fea644da47eaee458b4b61a.setContent(html_03f8ab66c8d7161eb2e0618b1a3cddba);
+            
+        
+
+        marker_2c1d35a77321547c729ef28d651c7ebb.bindPopup(popup_b04f81a22fea644da47eaee458b4b61a)
+        ;
+
+        
+    
+    
+                marker_2c1d35a77321547c729ef28d651c7ebb.setIcon(div_icon_d8c3af8c9b246d19f2595fa074ceb53f);
+            
+    
+            var marker_f51547b034e0176da8611619a2176064 = L.marker(
+                [51.555378, -0.116146],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_c9c26cdc159bb21c899c7f24a39c4a31 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                23\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_f51547b034e0176da8611619a2176064.setIcon(div_icon_c9c26cdc159bb21c899c7f24a39c4a31);
+        
+    
+        var popup_80470a1f343c90f8c71db0daae6e336b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f378c4f29416a90a4eb9e301920a7860 = $(`<div id="html_f378c4f29416a90a4eb9e301920a7860" style="width: 100.0%; height: 100.0%;">Islington - Holloway Road, United Kingdom<br>AQI: 23</div>`)[0];
+                popup_80470a1f343c90f8c71db0daae6e336b.setContent(html_f378c4f29416a90a4eb9e301920a7860);
+            
+        
+
+        marker_f51547b034e0176da8611619a2176064.bindPopup(popup_80470a1f343c90f8c71db0daae6e336b)
+        ;
+
+        
+    
+    
+                marker_f51547b034e0176da8611619a2176064.setIcon(div_icon_c9c26cdc159bb21c899c7f24a39c4a31);
+            
+    
+            var marker_393cedbee8f8f7ad1dfd7f38427e7e12 = L.marker(
+                [51.4282131429499, -0.13186863879576],
+                {
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var div_icon_8f5853030871da8000fa816818917c4f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"background-color: rgba(255, 255, 255, 0.8);\n                        border-radius: 5px;\n                        padding: 5px;\n                        font-size: 12px;\n                        font-weight: bold;\n                        text-align: center;\n                        color: black;\"\u003e\n                18\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_393cedbee8f8f7ad1dfd7f38427e7e12.setIcon(div_icon_8f5853030871da8000fa816818917c4f);
+        
+    
+        var popup_2e4ae736b7726c4e19cde6a4c8e111dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6705c39f5490932d42c1c5597c17a0e6 = $(`<div id="html_6705c39f5490932d42c1c5597c17a0e6" style="width: 100.0%; height: 100.0%;">Lambeth - Streatham Green, United Kingdom<br>AQI: 18</div>`)[0];
+                popup_2e4ae736b7726c4e19cde6a4c8e111dd.setContent(html_6705c39f5490932d42c1c5597c17a0e6);
+            
+        
+
+        marker_393cedbee8f8f7ad1dfd7f38427e7e12.bindPopup(popup_2e4ae736b7726c4e19cde6a4c8e111dd)
+        ;
+
+        
+    
+    
+                marker_393cedbee8f8f7ad1dfd7f38427e7e12.setIcon(div_icon_8f5853030871da8000fa816818917c4f);
+            
+    
+            var tile_layer_f30d795fd36bf0bb69618113815c8b4e = L.tileLayer(
+                "https://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=119661f30f2fe7fbdd7bb8c52cd29b3501a72508",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Air Quality Tiles by WAQI",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f30d795fd36bf0bb69618113815c8b4e.addTo(map_f12c505930012e3663dbdaef0cde4beb);
+        
+    
+            var layer_control_522c363bb39dff92e5e5717105efe0a9_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_70f37b1c82f09c97e1d8b5f71e7c0a64,
+                    "Air Quality (AQICN)" : tile_layer_f30d795fd36bf0bb69618113815c8b4e,
+                },
+                overlays :  {
+                    "macro_element_8688cd97b6dad2b0de0fb11357827460" : heat_map_8688cd97b6dad2b0de0fb11357827460,
+                },
+            };
+            let layer_control_522c363bb39dff92e5e5717105efe0a9 = L.control.layers(
+                layer_control_522c363bb39dff92e5e5717105efe0a9_layers.base_layers,
+                layer_control_522c363bb39dff92e5e5717105efe0a9_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_f12c505930012e3663dbdaef0cde4beb);
+
+        
+</script>
+</html>
